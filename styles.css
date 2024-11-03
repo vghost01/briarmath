@@ -1,0 +1,106 @@
+:root{
+  --bgcolor: white;
+  --textcolor: black;
+  --textcolor-hover: #696969;
+}
+
+body { 
+    margin-top: 20px;
+    font-family: sans-serif;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+
+h1 {
+    font-size: 2em; line-height: 2; margin-bottom: 4em;
+}
+
+#theme-toggle, #lang-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: var(--textcolor);
+}
+
+#theme-toggle:hover, #lang-toggle:hover{
+  color: var(--textcolor-hover);
+}
+
+#lang-toggle{
+    float: right;
+    margin-right: 1em;
+}
+
+header{
+  position: absolute;
+  top: 1em;
+  width: 100%;
+}
+
+/*TEXT EDITOR*/
+
+.answer { 
+    border: 1px solid #aaa; 
+    padding: 5px; box-sizing: content-box; 
+    min-height: 100px; 
+    font: 17px "Times New Roman"; 
+}
+
+#answer1{
+    margin-top: 25%;
+}
+
+.rich-text-editor img[src^="data:image/svg+xml"] { 
+    vertical-align: middle; 
+    margin: 4px; 
+    padding: 3px 10px; 
+    cursor: pointer; 
+    border: 1px solid transparent; 
+}
+
+.rich-text-editor.rich-text-focused img[src^="data:image/svg+xml"],
+.rich-text-editor:focus img[src^="data:image/svg+xml"] { 
+    background: #EDF9FF; border: 1px solid #E6F2F8; 
+}
+
+.rich-text-editor img[src*="data:image/png"] { 
+    margin: 4px; 
+}
+
+.rich-text-editor:focus img[src*="data:image/png"],
+.rich-text-editor.rich-text-focused img[src*="data:image/png"] { 
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .2); 
+}
+
+.result { 
+    display: none; 
+}
+
+/*DARK MODE*/
+
+.dark-mode {
+    --bgcolor: #202020 !important;
+    --textcolor: white !important;
+    --textcolor-hover: #c4c4c4 !important;
+}
+
+.dark-mode a{
+    color: #93bbfa;
+}
+
+.dark-mode .rich-text-editor-tools, .dark-mode .rich-text-editor-tools-row{
+    background: #2c2c2c;
+}
+  
+.dark-mode .rich-text-editor-toolbar-characters.rich-text-editor-toolbar-button-list .rich-text-editor-button{
+    color: white;
+}
+
+.dark-mode .rich-text-editor-toolbar .rich-text-editor-button:hover{
+    background: #4d4d4d;
+}
+
+.dark-mode .rich-text-editor-button.rich-text-editor-button-grid img{
+    filter: invert(1);
+}
