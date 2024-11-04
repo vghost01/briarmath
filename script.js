@@ -10,8 +10,9 @@ const translations = {
         addEquation: 'Σ Add equation',
         langText: '',
         import: 'Import:',
-        export: 'Export as HTML',
-        renderError: 'Error in LaTeX code'
+        export: 'Export',
+        renderError: 'Error in LaTeX code',
+        print: 'Print'
     },
     fi: {
         themeLight: 'Väriteema: Vaalea',
@@ -20,8 +21,9 @@ const translations = {
         addEquation: 'Σ Lisää kaava',
         langText: 'finnish',
         import: 'Tuo:',
-        export: 'Vie muotoon HTML',
-        renderError: 'Virhe LaTeX-koodissa'
+        export: 'Vie',
+        renderError: 'Virhe LaTeX-koodissa',
+        print: 'Tulosta'
     }
 };
 
@@ -109,3 +111,29 @@ $(window).on("beforeunload", function(event) {
         event.returnValue = ''; // Required for Chrome to show alert
     }
 });
+
+// ***
+// Print input
+// ***
+
+$('#export').click(e => {
+    e.preventDefault(); // Prevent the default link behavior
+
+    // Get the HTML content of the `.answer` element and encode it
+    const content = $('.answer').html();
+
+    // Open a new window
+    const newWindow = window.open('', '_blank', `width=${screen.width},height=${screen.height}`);
+
+    // Write the HTML content into the new window, wrapped in a basic HTML structure
+    newWindow.document.write(`
+        <html>
+        <head><title>Math content</title></head>
+        <body>${content}</body>
+        </html>
+    `);
+
+    // Close the document to finish loading the content
+    newWindow.document.close();
+});
+

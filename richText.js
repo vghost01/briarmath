@@ -55,10 +55,3 @@ function handleFiles() {
   const file = this.files[0]
   reader.readAsText(file)
 }
-
-$('#export').click(e => {
-  const link = 'data:text/html;base64,'+btoa($('.answer').html())
-  $(e.target)
-    .attr('href', link)
-    .attr('download', 'math-demo-answer-' + new Date().toISOString().split('.')[0] + '.html')
-})

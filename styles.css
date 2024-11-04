@@ -11,6 +11,15 @@ body {
     color: var(--textcolor);
 }
 
+.wrapper{
+    max-width: -webkit-calc(900px - (30px * 2));
+    max-width: calc(900px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
 h1 {
     font-size: 2em; line-height: 2; margin-bottom: 4em;
 }
@@ -29,13 +38,10 @@ h1 {
 
 #lang-toggle{
     float: right;
-    margin-right: 1em;
 }
 
 header{
-  position: absolute;
-  top: 1em;
-  width: 100%;
+  margin-top: 2.8em;
 }
 
 /*TEXT EDITOR*/
@@ -51,6 +57,14 @@ header{
     margin-top: 25%;
 }
 
+.answer-options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
 .rich-text-editor img[src^="data:image/svg+xml"] { 
     vertical-align: middle; 
     margin: 4px; 
@@ -61,7 +75,8 @@ header{
 
 .rich-text-editor.rich-text-focused img[src^="data:image/svg+xml"],
 .rich-text-editor:focus img[src^="data:image/svg+xml"] { 
-    background: #EDF9FF; border: 1px solid #E6F2F8; 
+    background: #EDF9FF;
+    border: 1px solid #E6F2F8; 
 }
 
 .rich-text-editor img[src*="data:image/png"] { 
@@ -103,4 +118,42 @@ header{
 
 .dark-mode .rich-text-editor-button.rich-text-editor-button-grid img{
     filter: invert(1);
+}
+
+.dark-mode .rich-text-editor img[src^="data:image/svg+xml"]{
+    filter: invert(1);
+}
+
+.dark-mode .rich-text-editor.rich-text-focused img[src^="data:image/svg+xml"],
+.dark-mode .rich-text-editor:focus img[src^="data:image/svg+xml"] { 
+    background: #878787;
+    border: 1px solid #878787;
+}
+
+.dark-mode .math-editor-equation-field{
+    background: #2c2c2c;
+    color: white;
+}
+
+.dark-mode .math-editor-latex-field{
+    background: #2c2c2c;
+    color: white;
+}
+
+.dark-mode .mq-editable-field .mq-cursor{
+    border-left: 1px solid white;
+}
+
+.dark-mode .mq-math-mode *{
+    border-color: white;
+}
+
+.dark-mode .mq-editable-field .mq-textarea, 
+.dark-mode .mq-math-mode .mq-textarea
+.dark-mode .math-editor textarea{
+    color: white;
+}
+
+.dark-mode .rich-text-editor-overlay-modal{
+    background: var(--bgcolor);
 }
