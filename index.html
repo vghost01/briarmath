@@ -15,8 +15,33 @@
       <button id="theme-toggle" title="Switch color theme between light and dark">Color theme: Light</button>
       <button id="lang-toggle" title="Switch language between English and Finnish">Language: EN</button>
     </header>
+    <hr>
     <article>
       <section>
+        <h1 id="title" data-translate="title">BriarMath math editor</h1>
+        <div class="instructions">
+          <div style="width: 55%;">
+            <ul>
+              <li data-translate="equationHelp">Under the "Add formula" button you will find common notations used in mathematics, physics and chemistry. In addition, special characters can be used to write the formula.</li>
+               <li data-translate="latexHelp">Formulas can be built by clicking the menu entries and/or typing LaTeX.</li>
+               <li data-translate="imageHelp">In the editor\'s text field, you can write text and formulas, add images, and import .txt and .html files.</li></ul>
+          </div>
+          <div style="width: 45%;">
+            <table><tbody>
+              <tr><th data-translate="paste">Paste image from clipboard</th><td>Ctrl-V</td></tr>
+              <tr><th data-translate="writeEquation">Write formula</th><td>Ctrl-E</td></tr>
+              <tr><th colspan="2" data-translate="inEquation">Inside formula</th></tr>
+              <tr><th data-translate="division">Fraction</th><td>/</td></tr>
+              <tr><th data-translate="multiply">Multiplication sign</th><td>*</td></tr>
+              <tr><th data-translate="exponent">Exponent</th><td>^</td></tr>
+              <tr><th data-translate="closeEquation">Close formula</th><td>Esc</td></tr>
+              <tr><th data-translate="nextRowEquation">Add formula to the next row</th><td>Enter</td></tr>
+              <tr><th data-translate="undoEquation">Undo formula</th><td>Ctrl-Z</td></tr>
+              <tr><th data-translate="redoEquation">Redo formula</th><td>Ctrl-Y</td></tr>
+              </tbody>
+              </table>
+          </div>
+        </div>
         <div class="answer" id="answer1"></div>
       </section>
     </article>
@@ -25,6 +50,9 @@
       <div id="export"><a  data-translate="export" href="math-demo-answer.html" id="export">Export</a></div>
     </div>
   </div>
+  <footer>
+    <a href="https://github.com/vghost01/briarmath">GitHub</a>
+  </footer>
   <script src="MathJax.js"></script>
   <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
   <script src="richText.js"></script>
